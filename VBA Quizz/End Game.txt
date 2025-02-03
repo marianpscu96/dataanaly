@@ -1,0 +1,42 @@
+Private Sub BacktoMenu_Click()
+
+EndGame.Hide
+
+correct = 0
+wrong = 0
+total = 0
+
+MainMenu.Show
+
+
+
+End Sub
+
+Private Sub TextBox1_Change()
+
+End Sub
+
+
+Public Sub Label1_Click()
+
+Label1.Caption = 0 + correct
+
+End Sub
+
+Public Sub Label2_Click()
+
+Label2.Caption = 0 + wrong
+
+End Sub
+
+Public Sub Label3_Click()
+
+Label3.Caption = correct - wrong
+
+If Label3.Caption < 0 Then
+
+    Label3.Caption = 0
+    
+End If
+
+End Sub

@@ -1,0 +1,42 @@
+Private Sub Q3ExitButton_Click()
+
+ThirdQuestion.Hide
+correct = 0
+wrong = 0
+total = 0
+MainMenu.Show
+
+End Sub
+
+Private Sub Q3VarA_Click()
+
+ThirdQuestion.Hide
+wrong = wrong + 1
+EndGame.Label1_Click
+EndGame.Label2_Click
+EndGame.Label3_Click
+EndGame.Show
+
+End Sub
+
+Private Sub Q3VarB_Click()
+
+ThirdQuestion.Hide
+wrong = wrong + 1
+EndGame.Label1_Click
+EndGame.Label2_Click
+EndGame.Label3_Click
+EndGame.Show
+
+End Sub
+
+Private Sub Q3VarC_Click()
+
+ThirdQuestion.Hide
+correct = correct + 1
+EndGame.Label1_Click
+EndGame.Label2_Click
+EndGame.Label3_Click
+EndGame.Show
+
+End Sub

@@ -1,0 +1,40 @@
+Private Sub FirstQuestionText_Change()
+
+End Sub
+
+Private Sub Q1ExitButton_Click()
+
+FirstQuestion.Hide
+correct = 0
+wrong = 0
+total = 0
+MainMenu.Show
+
+End Sub
+
+Private Sub Q1VarA_Click()
+
+FirstQuestion.Hide
+correct = correct + 1
+EndGame.Label1_Click
+SecondQuestion.Show
+
+End Sub
+
+Private Sub Q1VarB_Click()
+
+FirstQuestion.Hide
+wrong = wrong + 1
+EndGame.Label2_Click
+SecondQuestion.Show
+
+End Sub
+
+Private Sub Q1VarC_Click()
+
+FirstQuestion.Hide
+wrong = wrong + 1
+EndGame.Label2_Click
+SecondQuestion.Show
+
+End Sub

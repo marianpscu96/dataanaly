@@ -1,0 +1,64 @@
+Private Sub CommandButton1_Click()
+result = 9
+result = result + 29
+
+'Label1.Caption = result
+UserForm2.Label1_Click
+
+UserForm2.Show
+
+End Sub
+
+
+
+
+
+Public Sub Label1_Click()
+
+Label1.Caption = CStr(result)
+
+End Sub
+
+
+
+
+
+Sub run_quizz()
+
+correct = 0
+wrong = 0
+total = 0
+
+MainMenu.Show
+
+End Sub
+
+
+
+Private Sub Q1VarA_Click()
+
+FirstQuestion.Hide
+correct = correct + 1
+EndGame.Label1_Click
+SecondQuestion.Show
+
+End Sub
+
+Private Sub Q1VarB_Click()
+
+FirstQuestion.Hide
+wrong = wrong + 1
+EndGame.Label2_Click
+SecondQuestion.Show
+
+End Sub
+
+Private Sub Q1VarC_Click()
+
+FirstQuestion.Hide
+wrong = wrong + 1
+EndGame.Label2_Click
+SecondQuestion.Show
+
+End Sub
+

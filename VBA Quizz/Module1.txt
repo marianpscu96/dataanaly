@@ -1,0 +1,15 @@
+Public correct As Variant
+Public wrong As Variant
+Public total As Variant
+
+
+
+Sub run_quizz()
+
+correct = 0
+wrong = 0
+total = 0
+
+MainMenu.Show
+
+End Sub
