@@ -1,0 +1,29 @@
+Private Sub EXITt_Click()
+
+End
+
+End Sub
+
+Private Sub LOGIN_Click()
+
+Me.Hide
+LoginPage.Show
+
+End Sub
+
+Private Sub REGISTER_Click()
+
+Me.Hide
+Registration.Show
+
+
+End Sub
+
+Private Sub TextBox1_Change()
+
+
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub

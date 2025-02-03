@@ -1,0 +1,75 @@
+Dim my_db_path As String
+Dim my_db_provider As String
+Dim my_conn_declaration As String
+Dim my_conn As New Connection
+
+
+
+
+
+
+Private Sub FnameBox_Change()
+
+End Sub
+
+Private Sub FromRegtoMenu_Click()
+
+FnameBox.Value = ""
+LastNameBox.Value = ""
+EmailBox.Value = ""
+PasswordBox.Value = ""
+Me.Hide
+ExcelShop.Show
+
+End Sub
+
+Private Sub RegisterNow_Click()
+
+'Dim my_db_path As String
+Dim sql_records As Recordset
+'Dim my_db_provider As String
+'Dim my_conn_declaration As String
+'Dim my_conn As New Connection
+Dim validate_account As String
+Dim sql_insert_query As String
+Dim ID_counter As Long
+Randomize Timer
+
+
+my_db_path = "C:\Users\Marian\Desktop\Practice\2024\Customers.accdb"
+my_db_provider = "Microsoft.ACE.OLEDB.12.0;"
+my_conn_declaration = "Provider=" & my_db_provider & "Data Source=" & my_db_path
+
+
+my_conn.Open my_conn_declaration
+
+validate_account = "SELECT * FROM Customers WHERE Email = '" & EmailBox.Text & "'"
+'my_conn.Execute validate_account
+Set sql_records = my_conn.Execute(validate_account)
+
+ID_counter = Int((1000000 * Rnd) + 1)
+
+If sql_records.EOF Then
+
+    sql_insert_query = "INSERT INTO Customers VALUES(" & ID_counter & ", '" & FnameBox.Text & "', '" & LastNameBox.Text & "', '" & EmailBox.Text & "', '" & PasswordBox.Text & "',0)"
+
+    my_conn.Execute sql_insert_query
+    MsgBox "Your Account has been created."
+    
+Else
+
+    MsgBox "This account already exists, use a different email address", vbCritical
+    
+End If
+
+my_conn.Close
+
+End Sub
+
+Private Sub TextBox1_Change()
+
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub

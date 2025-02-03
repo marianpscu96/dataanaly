@@ -1,0 +1,62 @@
+Private Sub TextBox1_Change()
+
+
+
+End Sub
+
+Private Sub WelcomeTextbox_Change()
+
+WelcomeTextbox.Value = "WELCOME!"
+
+
+End Sub
+
+Private Sub BacktoMenuButton_Click()
+
+'Me.Hide
+'ExcelShop.Show
+
+
+End Sub
+
+Private Sub BacktoMenuButtonFromAccount_Click()
+
+Me.Hide
+ExcelShop.Show
+
+End Sub
+
+Private Sub DeleteAccount_Click()
+
+Dim my_conn As New Connection
+Dim main_rs As Recordset
+Dim check_email As String
+Dim deletion_rs As Recordset
+Dim sql_delete_query As String
+
+my_db_path = "C:\Users\Marian\Desktop\Practice\2024\Customers.accdb"
+my_db_provider = "Microsoft.ACE.OLEDB.12.0;"
+my_conn_declaration = "Provider=" & my_db_provider & "Data Source=" & my_db_path
+
+my_conn.Open my_conn_declaration
+
+check_email = "SELECT * FROM Customers WHERE Email = '" & DeletionEmail.Text & "'"
+Set main_rs = my_conn.Execute(check_email)
+
+If main_rs.EOF Then
+
+    MsgBox "There is no account registered with this address", vbCritical
+    
+Else
+
+    sql_delete_query = "DELETE FROM Customers WHERE Email = '" & DeletionEmail.Text & "'"
+    Set deletion_rs = my_conn.Execute(sql_delete_query)
+    MsgBox "Your account has been removed successfully."
+    Me.Hide
+    ExcelShop.Show
+
+End If
+
+my_conn.Close
+
+End Sub

@@ -1,0 +1,54 @@
+Public email_storage As String
+
+
+Private Sub FromLogintoMenu_Click()
+
+LoginEmailBox.Text = ""
+LoginPasswordBox.Text = ""
+Me.Hide
+ExcelShop.Show
+
+End Sub
+
+Private Sub LoginDoneButton_Click()
+
+Dim my_conn As New Connection
+Dim validate_login_email As String
+Dim validate_login_password As String
+Dim rs_email As Recordset
+Dim rs_password As Recordset
+
+my_db_path = "C:\Users\Marian\Desktop\Practice\2024\Customers.accdb"
+my_db_provider = "Microsoft.ACE.OLEDB.12.0;"
+my_conn_declaration = "Provider=" & my_db_provider & "Data Source=" & my_db_path
+
+my_conn.Open my_conn_declaration
+
+email_storage = LoginEmailBox.Text
+
+validate_login_email = "SELECT * FROM Customers WHERE Email = '" & LoginEmailBox.Text & "'"
+validate_login_password = "SELECT * FROM Customers WHERE Password = '" & LoginPasswordBox.Text & "'"
+
+Set rs_email = my_conn.Execute(validate_login_email)
+Set rs_password = my_conn.Execute(validate_login_password)
+
+If rs_email.EOF Or rs_password.EOF Then
+
+ MsgBox "Wrong UserName or Password!", vbCritical
+ 
+Else
+
+ Me.Hide
+ AccountPage.Show
+ 
+End If
+
+my_conn.Close
+
+End Sub
+
+Private Sub LoginEmailBox_Change()
+
+email_storage = LoginEmailBox.Text
+
+End Sub
