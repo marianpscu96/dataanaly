@@ -1,0 +1,221 @@
+
+Dim text_input As Variant
+Dim result As Variant
+
+
+
+Private Sub Clear_Click()
+
+End Sub
+
+Private Sub CommandButton10_Click()
+
+End Sub
+
+Private Sub CommandButton14_Click()
+
+End Sub
+
+Private Sub AdditionButton_Click()
+
+TextBox1.Value = TextBox1.Value + "+"
+
+
+
+End Sub
+
+Private Sub ClearButton_Click()
+
+TextBox1.Value = "0"
+
+End Sub
+
+Private Sub DivisionButton_Click()
+
+TextBox1.Value = TextBox1.Value + "/"
+
+End Sub
+
+Private Sub EightButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 8
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 8
+    
+End If
+
+
+End Sub
+
+Private Sub EqualButton_Click()
+
+text_input = TextBox1.Value
+
+result = Evaluate(text_input)
+result = CStr(result)
+
+TextBox1.Value = result
+    
+End Sub
+
+Private Sub FiveButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 5
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 5
+    
+End If
+
+
+
+
+End Sub
+
+Private Sub FourButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 4
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 4
+    
+End If
+
+    
+End Sub
+
+Private Sub MultiplicationButton_Click()
+
+TextBox1.Value = TextBox1.Value + "*"
+
+End Sub
+
+Private Sub NineButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 9
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 9
+    
+End If
+
+
+End Sub
+
+Private Sub OneButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 1
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 1
+    
+End If
+
+
+End Sub
+
+Private Sub SevenButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 7
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 7
+    
+End If
+
+
+End Sub
+
+Private Sub SixButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 6
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 6
+    
+End If
+
+
+End Sub
+
+Private Sub SubtractionButton_Click()
+
+TextBox1.Value = TextBox1.Value + "-"
+
+End Sub
+
+Private Sub TextBox1_Change()
+
+End Sub
+
+
+
+Private Sub TextBox2_Change()
+
+End Sub
+
+
+
+
+
+Private Sub ThreeButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 3
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 3
+    
+End If
+
+
+End Sub
+
+Private Sub TwoButton_Click()
+
+If TextBox1.Value = 0 Then
+
+    TextBox1.Value = 2
+    
+Else
+
+    TextBox1.Value = TextBox1.Value & 2
+    
+End If
+
+
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub
+
+Private Sub ZeroButton_Click()
+
+TextBox1.Value = TextBox1.Value & 0
+
+End Sub
